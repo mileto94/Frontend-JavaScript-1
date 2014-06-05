@@ -8,4 +8,4 @@ var factorial = function(n) {
 };
 
 // make the function available for testing
-exports.factorial = factorial;
+exports.jim = factorial;
