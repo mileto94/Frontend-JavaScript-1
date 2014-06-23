@@ -20,7 +20,6 @@ var students = [{
 }];
 
 var f = function(student) {
-  console.log("student.course", student.course);
   return student.course;
 };
 

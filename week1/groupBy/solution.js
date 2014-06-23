@@ -1,7 +1,19 @@
 "use strict";
 
 var groupBy = function (groupingFunction, arr) {
-  return arr.filter( function(obj) { return obj[groupingFunction(obj)]; } );
+  var result = {};
+  arr.filter(function(obj){
+    var key = groupingFunction(obj);
+
+    if(!result[key]) {
+      result[key] = [];
+    }
+    result[key].push(obj);
+
+  });
+
+  return result;
+
 };
 
 exports.groupBy = groupBy;
