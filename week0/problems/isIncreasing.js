@@ -5,9 +5,19 @@ var isIncreasing = function (list) {
     return true;
   }
   else {
-    return list.every(function (a, b) {
-      return a - b < 0;
-    });
+    var index = 0, flag = false;
+    while(index < list.length - 1) {
+      console.log(list[index] , list[index + 1]);
+      if(list[index] < list[index + 1]) {
+        flag = true;
+      }
+      else {
+        flag = false;
+        break;
+      }
+      index++;
+    }
+    return flag;
   }
 };
 

@@ -7,7 +7,12 @@ exports.testWith5_4_3_2_1 = function (test) {
   test.done();
 };
 
-exports.testWith1 = function (test) {
+exports.testWith5 = function (test) {
+  test.equal(false, isDecreasing([5]));
+  test.done();
+};
+
+exports.testWith1_2_3 = function (test) {
   test.equal(false, isDecreasing([1,2,3]));
   test.done();
 };
@@ -17,7 +22,7 @@ exports.testWith100_50_20 = function (test) {
   test.done();
 };
 
-exports.testWith11111 = function (test) {
+exports.testWith1_1_1_1_1 = function (test) {
   test.equal(false, isDecreasing([1, 1, 1, 1, 1]));
   test.done();
 };

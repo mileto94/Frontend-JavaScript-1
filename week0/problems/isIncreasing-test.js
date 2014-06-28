@@ -12,7 +12,7 @@ exports.testWith1 = function (test) {
   test.done();
 };
 
-exports.testWith56_10 = function (test) {
+exports.testWith5_6_10 = function (test) {
   test.equal(false, isIncreasing([5, 6, -10]));
   test.done();
 };

@@ -98,7 +98,7 @@ We recommend the following defaults as a base:
 
 For base, we are going to use `SublimeCodeIntel` and `JSHint Gutter`
 
-If you have fresh Sublime installed, first, you need to get the `Package Control` plugin - https://sublime.wbond.net/installation
+If you have fresh Sublime installed, first, you need to get the `Package Control` plugin - LINK
 
 After this, in Sublime, press `ctrl + shift + p` and type `Install Package`
 
@@ -158,10 +158,3 @@ Now, open the file called `run_this.html` in a browser (We recommend Chrome).
 Open the browser console and navigate to the console output.
 
 You should see the same result as from the NodeJS.
-
-## When you are ready
-
-If you have the required setup, you can move to:
-
-* `tic-tac-toe`  folder, where there is a game to finish. It is a console-based tic-tac-toe. `README.md` there will give you more instructions.
-* `problems` folder, where there are simple coding problems to be solved using JavaScript (With NodeJS). Again, `README.md` there for more instructions.
