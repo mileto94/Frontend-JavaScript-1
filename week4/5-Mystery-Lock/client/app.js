@@ -73,6 +73,24 @@ $(document).ready(function() {
     enableButton(0);
   });
 
+  $(document).on("click", ".secret-button", function() {
+    var label = $(this).data("token");
+    $.ajax({
+      url: "http:/localhost:3000/secret/" + label,
+      type: "GET",
+      dataType: "json"
+    }).done(function(data) {
+      concatenatedSecrets += data.secret;
+      console.log(data);
+      console.log(concatenatedSecrets);
+    });
+
+    var $index = $(this).data("index");
+    enableButton($index + 1);
+    $(this).addClass("disabled");
+
+  });
+
   $(".unlock").on("click", function() {
     $.ajax({
       url: "http://localhost:3000/unlock",
