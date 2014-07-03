@@ -33,11 +33,7 @@ var byCourse = { "Frontend JavaScript":
      { name: "Nikola Dichev", course: "Core Java" } ] };
 
 exports.testWithKeys = function (test) {
-  test.equal(byCourse, group(f, students));
+  test.deepEqual(byCourse, group(f, students));
   test.done();
 };
 
-var groupBy = function (groupingFunction, arr) {
-  return arr.filter( function(obj) { return obj[groupingFunction(obj)]; } );
-};
-console.log(groupBy(f, students));
