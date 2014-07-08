@@ -2,7 +2,11 @@
 
 var find = function (f, arr) {
   if(arr.some(f, arr)) {
-    return arr[0];
+    return arr.filter(function(element) {
+      if(f(element)) {
+        return element;
+      }
+    })[0];
   }
 };
 
