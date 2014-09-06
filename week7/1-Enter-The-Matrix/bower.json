@@ -1,10 +1,6 @@
 {
   "name": "5-load-jquery-from-bower",
-  "version": "0.0.0",
-  "homepage": "https://github.com/HackBulgaria/Frontend-JavaScript-1",
-  "authors": [
-    "Radoslav Georgiev <g2h.horde@gmail.com>"
-  ],
+  "version": "1.0.0",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -15,6 +11,7 @@
   ],
   "dependencies": {
     "requirejs": "~2.1.14",
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "handlebars": "~1.3.0"
   }
 }

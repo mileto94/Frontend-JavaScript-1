@@ -34,6 +34,10 @@ var snake = (function(ctx) {
         isAlive = false;
     };
 
+    var setSnakeColor = function(color) {
+        snakeColor = color;
+    };
+
     var move = function() {
         if (isAlive) {
             switch (direction) {
@@ -91,6 +95,7 @@ var snake = (function(ctx) {
         getIsAlive: getIsAlive,
         killSnake: killSnake,
         isOnFood: isOnFood,
+        setSnakeColor: setSnakeColor
     };
 }(ctx));
 
@@ -183,9 +188,13 @@ var food = (function(ctx) {
     };
 }(ctx));
 
-$("#slider").on("change", function(){
-    speed -= $(this).val();
-    console.log(speed);
+$("#slider").on("change", function(event){
+    event.preventDefault();
+    speed = $(this)[0].max - $(this).val();
+});
+
+$("#colorPicker").on("change", function(){
+    snake.setSnakeColor($(this).val());
 });
 
 gameLoop();

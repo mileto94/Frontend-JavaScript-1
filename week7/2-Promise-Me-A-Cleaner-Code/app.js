@@ -7,20 +7,20 @@ require.config({
 require(["Q"], function(Q) {
 
   function first() {
-    var defer_obj = Q.defer();
+    var deferObj = Q.defer();
 
     setTimeout(function(){
-      defer_obj.resolve(console.log("called first!"));
+      deferObj.resolve(console.log("called first!"));
     }, 1000);
-    return defer_obj.promise;
+    return deferObj.promise;
   }
 
   function second() {
-    var defer_obj = Q.defer();
+    var deferObj = Q.defer();
     setTimeout(function() {
-      defer_obj.resolve(console.log("called second!"));
+      deferObj.resolve(console.log("called second!"));
     }, 1000);
-    return defer_obj.promise;
+    return deferObj.promise;
   }
 
   function third() {

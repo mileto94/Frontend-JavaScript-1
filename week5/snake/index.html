@@ -20,13 +20,15 @@
     <canvas id="hackCanvas" width="400" height="400" style="border: 1px solid;">
     </canvas>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="snake.js"></script>
-
     <div class="nav-bar">
-        <input id="slider" type="range" name="speed" min="50" max="150">
+        <p>Game speed
+        <input id="slider" type="range" name="speed" min="16" max="50">
+        </p>
+        <p>Snake color<input type="color" name="color-picker" id="colorPicker"></p>
     </div>
 
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="snake.js"></script>
 </body>
 
 </html>
