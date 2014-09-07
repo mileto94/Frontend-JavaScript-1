@@ -3,5 +3,5 @@
     "browser": true,
     "globals": {
     "alert": true
-    }
+    },
 }
