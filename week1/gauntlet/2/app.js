@@ -1,23 +1,20 @@
-"use strict";
+/* globals $, console, document */
 
 $(document).ready(function() {
-  var paragraphs = [$(".first"), $(".second"), $(".third")];
-  var index = 0;
+  "use strict";
+  var paragraphs = $("p"),
+      first = paragraphs.first(),
+      last = paragraphs.last(),
+      current = $(".first");
   $("button").click(function() {
-    switch(index % 3) {
-      case 0:
-        paragraphs[0].addClass("highlight");
-        paragraphs[2].removeClass("highlight");
-        break;
-      case 1:
-        paragraphs[1].addClass("highlight");
-        paragraphs[0].removeClass("highlight");
-        break;
-      case 2:
-        paragraphs[2].addClass("highlight");
-        paragraphs[1].removeClass("highlight");
-        break;
-    }
-      index++;
+      current.addClass("highlight");
+      current.prev().removeClass("highlight");
+      if(current.prev().length === 0) {
+        last.removeClass("highlight");
+      }
+      current = current.next();
+      if(current.length === 0) {
+        current = first;
+      }
   });
 });
