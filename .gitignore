@@ -2,3 +2,5 @@ week0/tic-tac-toe/node_modules/
 .jshintrc
 bower_components/
 week5/bower_components/
+server/node_modules/
+node_modules/
