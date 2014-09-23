@@ -8,15 +8,16 @@ $(document).ready(function() {
 
     image.onload = function() {
       $(".container").append($(this));
+
+      $(this).on("click",function() {
+        $(this).remove();
+      });
+
     };
 
     image.onerror = function() {
         alert("Input Error: Invalid image URL!");
     };
-
-    $("img").on("click", function() {
-      $(this).remove();
-    });
 
   });
 });
