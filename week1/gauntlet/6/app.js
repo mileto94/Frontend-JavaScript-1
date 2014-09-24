@@ -8,15 +8,6 @@ $(document).ready(function() {
     }
   };
 
-  // var removeOption = function(target, item) {
-  //   var toRemove = target.filter(function(){
-  //     console.log(target.text().search(item) > -1);
-  //     return target.text().search(item) > -1;
-  //   });
-    // console.log(toRemove);
-    // target.remove(toRemove);
-  // };
-
   $.get("http://localhost:3000/students")
   .done(function(data){
 
@@ -28,22 +19,24 @@ $(document).ready(function() {
     });
 
     var selected = [];
-    first.click(function(){
-      selected.push($(".items1 option:selected").val());
+    $("option").click(function(){
+      var value = $(this).val();
+
+      if(selected.indexOf(value) < 0){
+        selected.push(value);
+        $(this).addClass("to");
+      }
+
       console.log(selected);
 
     $(".right").click(function(){
+      $(this).data("clicked", true);
       selected.forEach(function(item){
         insertOption(second, item);
-        console.log(item);
-        // removeOption(first, item);
-        // $(".items1 option:selected").text("");
-        //doesn't remove all selected items in once
-        $(".items1 option:selected").remove();
-
+        $(".to").remove();
+        selected = [];
+        });
       });
-      selected = [];
-    });
     });
 
 
