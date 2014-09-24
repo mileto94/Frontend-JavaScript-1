@@ -18,27 +18,26 @@ $(document).ready(function() {
       insertOption(first, item);
     });
 
-    var selected = [];
-    $("option").click(function(){
-      var value = $(this).val();
+    $(".right").click(function(){
 
-      if(selected.indexOf(value) < 0){
-        selected.push(value);
-        $(this).addClass("to");
+      left_queue = $(".items1 option:selected");
+
+      for (var i = 0; i < left_queue.length; i++) {
+        insertOption(second, left_queue[i].textContent);
       }
 
-      console.log(selected);
-
-    $(".right").click(function(){
-      $(this).data("clicked", true);
-      selected.forEach(function(item){
-        insertOption(second, item);
-        $(".to").remove();
-        selected = [];
-        });
-      });
+      left_queue.remove();
     });
 
+    $(".left").click(function() {
+      right_queue = $(".items2 option:selected");
+
+      for (var i = 0; i < right_queue.length; i++) {
+        insertOption(first, right_queue[i].textContent);
+      }
+
+      right_queue.remove();
+    });
 
   })
   .fail(function(){
