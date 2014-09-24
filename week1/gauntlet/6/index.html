@@ -10,26 +10,21 @@
         <h1>Move selected items from the first list to the second list</h1>
         <div class="row">
             <div class="col-xs-4">
-                <select size="10" multiple class="form-control">
-                    <option>Item 1</option>
-                    <option>Item 1</option>
-                    <option>Item 1</option>
-                    <option>Item 1</option>
-                    <option>Item 1</option>
-                    <option>Item 1</option>
+                <select size="10" multiple class="form-control items1">
+
                 </select>
             </div>
             <div class="col-xs-1 buttons">
                 <div class="button-control">
-                    <button class="btn btn-success">--&gt;</button>
+                    <button class="btn btn-success right">--&gt;</button>
                 </div>
 
                 <div class="button-control">
-                    <button class="btn btn-warning">&lt;--</button>
+                    <button class="btn btn-warning left">&lt;--</button>
                 </div>
             </div>
             <div class="col-xs-4">
-                <select multiple size="10" class="form-control">
+                <select multiple size="10" class="form-control items2">
 
                 </select>
             </div>
@@ -37,5 +32,7 @@
     </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
