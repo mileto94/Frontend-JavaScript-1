@@ -1,6 +1,5 @@
-"use strict";
-
 function Point (x, y) {
+"use strict";
   if(!(this instanceof Point)) {
     return new Point(x, y);
   }
@@ -58,7 +57,7 @@ function Robot(startPoint) {
   };
 
   this.getPosition = function() {
-    return ["(", startPoint.getX(), startPoint.getY(), ")"].join(" ");
+    return ["(", startPoint.getX(), ",", startPoint.getY(), ")"].join(" ");
   };
 }
 
@@ -74,3 +73,11 @@ var p1 = new Point(2, 3);
 
 var r = new Robot(p1);
 console.log(r.moveLeft(1));
+
+
+var robot = new Robot(new Point(0, 0));
+
+robot.moveLeft(10);
+robot.moveDown(5);
+
+console.log(robot.getPosition().toString()); // Point @ -10, 5
